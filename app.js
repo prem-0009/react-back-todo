@@ -5,8 +5,8 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 // var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/user/users");
-const todoRouter = require('./routes/todo/Todo')
+var usersRouter = require("./routes/user/user");
+const todoRouter = require('./routes/todo/todo')
 
 const mongoose = require("mongoose"); //1-------------all the requirements added
 const cors = require('cors')//mechanism to allow authorization for access
@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 // app.use("/", indexRouter);
-app.use("/api/users", usersRouter);
+app.use("/api/user", usersRouter);
 app.use('/api/todo', todoRouter);// setting path for todo router
 // app.use('/api/users/todo', ÷usersRouter);
 

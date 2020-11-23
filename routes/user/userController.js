@@ -1,4 +1,4 @@
-const User = require("./User");
+const User = require("./UserModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -6,10 +6,7 @@ console.clear();
 module.exports = {
 
   createUser: async (req, res) => {
-// return res.send('hello')
-    //   return;
-    // res.send(req.body.email)
-    // console.log(req.body.email)
+
 
     try {
       let createUser = new User({
@@ -27,7 +24,7 @@ module.exports = {
 
       res.json({message:'user created'});
 
-        console.log(createUser.email);
+        console.log(createUser);
     } catch (e) {
       //   console.log(e)
       if (e.code === 11000) {
@@ -69,6 +66,6 @@ module.exports = {
     console.log("--------------------------");
 
 
-    // res.send(foundU?ser)  }
+    
   },
 };
