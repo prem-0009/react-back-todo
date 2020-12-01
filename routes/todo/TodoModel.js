@@ -9,4 +9,4 @@ const  todoSchema = new mongoose.Schema({
     
 })
 
-module.exports = mongoose.Schema('Todo', todoSchema);
+module.exports = mongoose.model('Todo', todoSchema);
